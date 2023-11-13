@@ -1,1 +1,80 @@
-# Domo-Django-Vue
+# 
+## Table of Contents
+
+- [Installation](#installation)
+- [Frontend Installation](#frontend-installation)
+- [Backend Installation](#backend-installation)
+- [Contact](#contact)
+
+
+
+## Installation 
+
+Clone the repository to your local machine:
+
+```bash
+  git clone https://github.com/inerttila/Domo-Django-Vue.git
+```
+
+Navigate to the project directory:
+
+```bash
+  cd Domo-Django-Vue
+```
+
+## Frontend Installation
+
+To run the Vue app, navigate to the front-end directory:
+
+```bash
+  cd front
+```
+
+Install the required Node.js packages:
+
+```bash
+  npm install 
+  npm install -g create-vite
+```
+
+Start the frontend app:
+
+```bash
+  npm run dev
+```
+
+## Backend Installation
+
+Open a new terminal and go to the backend directory:
+
+```bash
+  cd Domo-Django-Vue/reviews
+```
+
+Install the required Python packages:
+
+```bash
+  pip install djangorestframework
+  pip install django-cors-headers
+```
+
+Create a superuser for the Django project:
+
+```bash
+  python manage.py createsuperuser
+```
+
+Run the Django project:
+
+```bash
+  python manage.py runserver
+```
+
+## Contact
+
+For inquiries or assistance, feel free to reach out through the following channels:
+
+- Email: [inert.etila@gmail.com](mailto:inert.etila@gmail.com)
+- LinkedIn: [Inert Tila](https://al.linkedin.com/in/inerttila)
+
+You can email me for any questions or support related to this project, and you can also connect with me on LinkedIn to stay updated on my professional activities.
