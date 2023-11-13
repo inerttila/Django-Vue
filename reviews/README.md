@@ -39,3 +39,7 @@ Create a superuser for the Django project:
 ```bash
   python manage.py runserver
 ```
+
+<!--  pip install djangorestframework
+      pip install django-cors-headers
+   -->

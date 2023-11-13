@@ -34,12 +34,7 @@ To run the Vue app, navigate to the front-end directory:
 Install the required Node.js packages:
 
 ```bash
-<<<<<<< HEAD
   npm install
-  npm install -g create-vite
-=======
-  npm install 
->>>>>>> dffaa70e7b15318cca8879863b4a82600c8ed64d
 ```
 
 Start the frontend app:
@@ -56,11 +51,17 @@ Open a new terminal and go to the backend directory:
   cd Domo-Django-Vue/reviews
 ```
 
-Install the required Python packages:
+Create and activate a virtual environment:
 
 ```bash
-  pip install djangorestframework
-  pip install django-cors-headers
+  pip install pipenv
+  pipenv install
+```
+
+Start the environment:
+
+```bash
+  pipenv shell
 ```
 
 Create a superuser for the Django project:
