@@ -5,8 +5,8 @@ Private Suggestions Portal collaboratively by utilizing Django Rest Framework 3 
 ## Table of Contents
 
 - [Installation](#installation)
-- [Frontend Installation](#frontend-installation)
-- [Backend Installation](#backend-installation)
+  - [Frontend Installation](#frontend-installation)
+  - [Backend Installation](#backend-installation)
 - [Contact](#contact)
 
 ## Installation
@@ -34,8 +34,12 @@ To run the Vue app, navigate to the front-end directory:
 Install the required Node.js packages:
 
 ```bash
+<<<<<<< HEAD
   npm install
   npm install -g create-vite
+=======
+  npm install 
+>>>>>>> dffaa70e7b15318cca8879863b4a82600c8ed64d
 ```
 
 Start the frontend app:
