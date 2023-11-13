@@ -37,7 +37,6 @@ Install the required Node.js packages:
 
 ```bash
   npm install 
-  npm install -g create-vite
 ```
 
 Start the frontend app:
