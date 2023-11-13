@@ -18,7 +18,6 @@ Install Pipenv (if not already installed):
 Create and activate the Python virtual environment:
 
 ```bash
-  pip install pipenv
   pipenv install
   pipenv shell
 ```
