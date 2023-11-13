@@ -9,9 +9,7 @@ Private Suggestions Portal collaboratively by utilizing Django Rest Framework 3 
 - [Backend Installation](#backend-installation)
 - [Contact](#contact)
 
-
-
-## Installation 
+## Installation
 
 Clone the repository to your local machine:
 
@@ -36,7 +34,7 @@ To run the Vue app, navigate to the front-end directory:
 Install the required Node.js packages:
 
 ```bash
-  npm install 
+  npm install
   npm install -g create-vite
 ```
 
