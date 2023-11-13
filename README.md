@@ -5,8 +5,8 @@ Private Suggestions Portal collaboratively by utilizing Django Rest Framework 3 
 ## Table of Contents
 
 - [Installation](#installation)
-- [Frontend Installation](#frontend-installation)
-- [Backend Installation](#backend-installation)
+  - [Frontend Installation](#frontend-installation)
+  - [Backend Installation](#backend-installation)
 - [Contact](#contact)
 
 
@@ -25,7 +25,7 @@ Navigate to the project directory:
   cd Domo-Django-Vue
 ```
 
-## Frontend Installation
+### Frontend Installation
 
 To run the Vue app, navigate to the front-end directory:
 
@@ -45,7 +45,7 @@ Start the frontend app:
   npm run dev
 ```
 
-## Backend Installation
+### Backend Installation
 
 Open a new terminal and go to the backend directory:
 
