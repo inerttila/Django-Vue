@@ -1,4 +1,4 @@
-# Domo-Django-Vue
+# Django-Vue
 
 Private Suggestions Portal collaboratively by utilizing Django Rest Framework 3 for the backend and VueJS 3, with Pinia for the frontend. This platform enables users to submit suggestions and vote, on them. The project is stored in an repository and launching it requires minimal setup. The code is designed to be review friendly facilitating effortless deployment.
 
@@ -14,13 +14,13 @@ Private Suggestions Portal collaboratively by utilizing Django Rest Framework 3 
 Clone the repository to your local machine:
 
 ```bash
-  git clone https://github.com/inerttila/Domo-Django-Vue.git
+  git clone https://github.com/inerttila/Django-Vue.git
 ```
 
 Navigate to the project directory:
 
 ```bash
-  cd Domo-Django-Vue
+  cd Django-Vue
 ```
 
 ## Frontend Installation
@@ -48,7 +48,7 @@ Start the frontend app:
 Open a new terminal and go to the backend directory:
 
 ```bash
-  cd Domo-Django-Vue/reviews
+  cd Django-Vue/reviews
 ```
 
 Create and activate a virtual environment:
