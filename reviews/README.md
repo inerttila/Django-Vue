@@ -5,7 +5,7 @@
 Open a new terminal and navigate to the backend directory:
 
 ```bash
-  cd Domo-Django-Vue/reviews
+  cd Django-Vue/reviews
 ```
 
 Install Pipenv (if not already installed):
