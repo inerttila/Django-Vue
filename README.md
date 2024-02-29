@@ -7,7 +7,6 @@ Private Suggestions Portal collaboratively by utilizing Django Rest Framework 3 
 - [Installation](#installation)
   - [Frontend Installation](#frontend-installation)
   - [Backend Installation](#backend-installation)
-- [Contact](#contact)
 
 ## Installation
 
@@ -75,11 +74,3 @@ Run the Django project:
 ```bash
   python manage.py runserver
 ```
-
-## Contact
-
-For inquiries or assistance, feel free to reach out through the following channels:
-
-- LinkedIn: [Inert Tila](https://al.linkedin.com/in/inerttila)
-
-You can email me for any questions or support related to this project, and you can also connect with me on LinkedIn to stay updated on my professional activities.
