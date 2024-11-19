@@ -11,7 +11,7 @@ const { reviewsList, filteredReviews } = storeToRefs(generalsStore)
 
 const fetchAndSetReviews = async () => {
   try {
-    const res = await fetch('http://127.0.0.1:8000/api/reviews/')
+    const res = await fetch('http://192.168.40.14:8000/api/reviews/')
 
     const reviews = await res.json()
 

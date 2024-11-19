@@ -13,16 +13,19 @@ defineProps({
 const votedThumb = ref('')
 
 const updateLikeCount = async (review) => {
-  const res = await fetch(`http://127.0.0.1:8000/api/reviews/${review.id}/update_thumbs_count/`, {
-    method: 'PATCH',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      thumbsUppCount: review.thumbsUppCount,
-      thumbsDownCount: review.thumbsDownCount
-    })
-  })
+  const res = await fetch(
+    `http://192.168.40.14:8000/api/reviews/${review.id}/update_thumbs_count/`,
+    {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        thumbsUppCount: review.thumbsUppCount,
+        thumbsDownCount: review.thumbsDownCount
+      })
+    }
+  )
 
   if (!res.ok) {
     toast.error('Something went wrong!')
