@@ -1,0 +1,21 @@
+FROM node:20
+
+RUN apt-get update 
+
+WORKDIR /usr/src/app
+
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash \
+    && export NVM_DIR="$HOME/.nvm" \
+    && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" \
+    && nvm install node
+
+COPY package*.json ./
+COPY . .
+
+RUN npm i
+
+RUN npm run build
+
+EXPOSE 3000
+
+CMD ["npm", "run", "serve"]

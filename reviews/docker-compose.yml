@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: inert/inventar-djnago:new
+    container_name: inventar-djnago
+    ports:
+      - "8000:8000"

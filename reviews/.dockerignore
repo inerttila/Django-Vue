@@ -1,0 +1,8 @@
+db.sqlite3
+/media/*
+*.pyc
+config/settings/__pycache__/*.pyc
+__pycache__/
+env
+venv
+config/settings/____/*.pyc

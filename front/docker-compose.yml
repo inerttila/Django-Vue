@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: inert/inventar-vue:new
+    container_name: inventar-vue
+    ports:
+      - '3000:3000'
