@@ -22,13 +22,17 @@ Navigate to the project directory:
   cd Django-Vue
 ```
 
+````bash
+ docker-compose up --build
+ ```
+
 ## Frontend Installation
 
 To run the Vue app, navigate to the front-end directory:
 
 ```bash
   cd front
-```
+````
 
 Install the required Node.js packages:
 
