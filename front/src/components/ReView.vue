@@ -1,5 +1,5 @@
 <script setup>
-import { StarIcon, HandThumbUpIcon, HandThumbDownIcon } from '@heroicons/vue/24/solid'
+import { HandThumbUpIcon, HandThumbDownIcon } from '@heroicons/vue/24/solid'
 import { ref } from 'vue'
 import { toast } from 'vue3-toastify'
 
