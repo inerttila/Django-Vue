@@ -35,73 +35,63 @@ const handleSearch = () => {
 </script>
 
 <template>
-  <div class="greetings max-w-7xl m-auto">
-    <div class="flex justify-center items-center min-h-screen">
-      <div class="flex flex-col gap-2 p-5">
-        <div class="flex justify-between items-center gap-32">
-          <h1 class="text-lg" v-if="reviewsList.length === 0">Add First Product</h1>
-          <h1 class="text-lg" v-else>Products</h1>
-          <div
-            class="flex bg-gray-600 bg-opacity-20 border border-gray-200 rounded-md"
-            v-if="reviewsList.length"
-          >
-            <MagnifyingGlassIcon class="py-4 p-3 w-16 h-16" />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Search Product"
-              class="p-2 bg-transparent focus:outline-none"
-              v-model="searchInput"
-              @keyup="handleSearch"
-            />
-          </div>
+  <div class="greetings max-w-7xl mx-auto px-4">
+    <div class="flex flex-col justify-center items-center min-h-screen space-y-6">
+      <div
+        class="flex flex-col lg:flex-row justify-between items-center w-full space-y-4 lg:space-y-0"
+      >
+        <h1 class="text-3xl font-semibold text-white-800" v-if="reviewsList.length === 0">
+          Add Your First Product
+        </h1>
+        <h1 class="text-3xl font-semibold text-white-800" v-else>Products</h1>
+        <div
+          class="flex items-center bg-gray-100 border border-gray-300 rounded-md shadow-sm w-full max-w-md lg:max-w-xs overflow-hidden"
+          v-if="reviewsList.length"
+        >
+          <MagnifyingGlassIcon class="p-3 w-10 h-10 text-gray-600" />
+          <input
+            type="text"
+            placeholder="Search Product"
+            class="p-2 w-full bg-transparent text-black focus:outline-none"
+            v-model="searchInput"
+            @keyup="handleSearch"
+          />
         </div>
-
-        <div class="flex justify-center">
-          <button
-            class="mt-10 p-2 px-4 bg-gray-900 hover:bg-gray-950 border border-gray-950 bg-opacity-60 text-white"
-            @click="showNewReviewForm = !showNewReviewForm"
-          >
-            {{ showNewReviewForm ? 'Cancel' : 'Add Product' }}
-          </button>
-        </div>
-
-        <div v-if="showNewReviewForm">
-          <NewReviewForm :refetchReviews="refetchReviews" :showNewReviewForm="showNewReviewForm" />
-        </div>
-
-        <!-- Item Container -->
-        <ul class="flex flex-wrap justify-center gap-4 my-14">
-          <li v-for="review in filteredReviews" :key="review.id" class="max-w-xs w-full rounded-md">
-            <ReView :review="review" />
-          </li>
-        </ul>
       </div>
+
+      <button
+        class="mt-4 py-3 px-8 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-lg font-semibold rounded-lg shadow-lg hover:from-blue-600 hover:to-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-transform transform hover:scale-105 active:scale-95"
+        @click="showNewReviewForm = !showNewReviewForm"
+      >
+        {{ showNewReviewForm ? 'Cancel' : 'Add Product' }}
+      </button>
+
+      <div v-if="showNewReviewForm" class="w-full max-w-xl">
+        <NewReviewForm :refetchReviews="refetchReviews" :showNewReviewForm="showNewReviewForm" />
+      </div>
+
+      <ul class="flex flex-wrap justify-center gap-6 my-10">
+        <li
+          v-for="review in filteredReviews"
+          :key="review.id"
+          class="w-full sm:w-72 rounded-lg shadow-lg bg-black border border-gray-200 p-4 transition-transform transform hover:scale-105"
+        >
+          <ReView :review="review" />
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <style scoped>
 h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  position: relative;
-  top: -10px;
-}
+  font-size: 2rem;
 
-h3 {
-  font-size: 1.2rem;
-}
-
-.greetings h1,
-.greetings h3 {
   text-align: center;
 }
 
 @media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
+  h1 {
     text-align: left;
   }
 }
