@@ -8,26 +8,20 @@ Open a new terminal and navigate to the backend directory:
   cd Django-Vue/reviews
 ```
 
-Install Pipenv (if not already installed):
-
 ```bash
-  pip install pipenv
+python -m venv env
 
-```
-
-Create and activate the Python virtual environment:
-
-```bash
-  pipenv install
-  pipenv shell
+.\env\Scripts\activate
 ```
 
 Install Django Packages
 
-Install the required Python packages using Pipenv:
+```bash
+  pip install djangorestframework django-cors-headers
+```
 
 ```bash
-  pipenv install djangorestframework django-cors-headers
+  python manage.py migrate
 ```
 
 Create a superuser for the Django project:

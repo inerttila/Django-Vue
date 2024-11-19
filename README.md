@@ -50,17 +50,20 @@ Open a new terminal and go to the backend directory:
   cd Django-Vue/reviews
 ```
 
-Create and activate a virtual environment:
-
 ```bash
-  pip install pipenv
-  pipenv install
+python -m venv env
+
+.\env\Scripts\activate
 ```
 
-Start the environment:
+Install Django Packages
 
 ```bash
-  pipenv shell
+  pip install djangorestframework django-cors-headers
+```
+
+```bash
+  python manage.py migrate
 ```
 
 Create a superuser for the Django project:
@@ -68,8 +71,6 @@ Create a superuser for the Django project:
 ```bash
   python manage.py createsuperuser
 ```
-
-Run the Django project:
 
 ```bash
   python manage.py runserver
