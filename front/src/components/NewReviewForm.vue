@@ -90,14 +90,14 @@ const handleOptionsChange = (option) => {
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
       <form class="space-y-6" @submit="handleSubmit($event, refetchReviews)">
         <div>
-          <label for="username" class="block text-sm font-medium leading-6">Username</label>
+          <label for="username" class="block text-sm font-medium leading-6">Product Name</label>
           <div class="mt-2">
             <input
               id="username"
               name="username"
               type="text"
               autocomplete="username"
-              placeholder="Username"
+              placeholder="Product Name"
               class="block text-black w-full ps-2 rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               v-model="userNameInput"
             />
@@ -105,7 +105,7 @@ const handleOptionsChange = (option) => {
         </div>
 
         <div>
-          <label for="options" class="block text-sm font-medium leading-6">Options</label>
+          <label for="options" class="block text-sm font-medium leading-6">Category</label>
           <div class="mt-2">
             <select
               id="options"
@@ -115,12 +115,12 @@ const handleOptionsChange = (option) => {
               class="block text-black w-full ps-2 rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               @change="handleOptionsChange($event.target.value)"
             >
-              <option value="default" disabled selected>Select an option</option>
-              <option value="web-development">Web Development</option>
-              <option value="mobile-development">Mobile Development</option>
-              <option value="data-science">Data Science</option>
-              <option value="devops">DevOps</option>
-              <option value="other">Software Engineering</option>
+              <option value="default" disabled selected>Select an Category</option>
+              <option value="web-development">DJI Drone</option>
+              <option value="mobile-development">Dji Camera</option>
+              <option value="data-science">Dji Mic</option>
+              <option value="devops">Bambu Lab</option>
+              <option value="other">Filaments</option>
               <option value="other">Other</option>
             </select>
             {{ noOptionsSelectedMsg }}
@@ -129,7 +129,7 @@ const handleOptionsChange = (option) => {
 
         <div>
           <div class="flex items-center justify-between">
-            <label for="review" class="block text-sm font-medium leading-6">Review</label>
+            <label for="review" class="block text-sm font-medium leading-6">Price</label>
           </div>
           <div class="mt-2">
             <textarea
@@ -137,7 +137,7 @@ const handleOptionsChange = (option) => {
               name="review"
               type="text"
               autocomplete="review"
-              placeholder="Review"
+              placeholder="Price"
               required
               class="block text-black w-full ps-2 rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               v-model="reviewInput"

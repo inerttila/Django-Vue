@@ -39,8 +39,8 @@ const handleSearch = () => {
     <div class="flex justify-center items-center min-h-screen">
       <div class="flex flex-col gap-2 p-5">
         <div class="flex justify-between items-center gap-32">
-          <h1 class="text-lg" v-if="reviewsList.length === 0">Add First Review</h1>
-          <h1 class="text-lg" v-else>Reviews</h1>
+          <h1 class="text-lg" v-if="reviewsList.length === 0">Add First Product</h1>
+          <h1 class="text-lg" v-else>Products</h1>
           <div
             class="flex bg-gray-600 bg-opacity-20 border border-gray-200 rounded-md"
             v-if="reviewsList.length"
@@ -50,7 +50,7 @@ const handleSearch = () => {
               type="email"
               name="email"
               id="email"
-              placeholder="Search Review"
+              placeholder="Search Product"
               class="p-2 bg-transparent focus:outline-none"
               v-model="searchInput"
               @keyup="handleSearch"
@@ -63,7 +63,7 @@ const handleSearch = () => {
             class="mt-10 p-2 px-4 bg-gray-900 hover:bg-gray-950 border border-gray-950 bg-opacity-60 text-white"
             @click="showNewReviewForm = !showNewReviewForm"
           >
-            {{ showNewReviewForm ? 'Cancel' : 'Add Review' }}
+            {{ showNewReviewForm ? 'Cancel' : 'Add Product' }}
           </button>
         </div>
 
