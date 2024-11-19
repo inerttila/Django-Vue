@@ -13,7 +13,7 @@ defineProps({
 const votedThumb = ref('')
 
 const updateLikeCount = async (review) => {
-  const res = await fetch(`http://localhost:8000/api/reviews/${review.id}/update_thumbs_count/`, {
+  const res = await fetch(`http://127.0.0.1:8000/api/reviews/${review.id}/update_thumbs_count/`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json'
