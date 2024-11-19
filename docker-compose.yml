@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  # Django app service
+  inventar-djnago:
+    build:
+      context: ./reviews
+      dockerfile: Dockerfile
+    image: inert/inventar-djnago:new
+    container_name: inventar-djnago
+    ports:
+      - "8000:8000" # Exposes port 8000 for Django
+    volumes:
+      - ./reviews:/app
+    networks:
+      - frontend
+      - backend
+
+  # Vue.js app service
+  inventar-vue:
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    image: inert/inventar-vue:new
+    container_name: inventar-vue
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./front:/app
+
+    networks:
+      - frontend
+      - backend
+
+networks:
+  backend:
+  frontend:
