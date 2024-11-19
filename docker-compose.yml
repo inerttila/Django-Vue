@@ -9,7 +9,7 @@ services:
     image: inert/inventar-djnago:new
     container_name: inventar-djnago
     ports:
-      - "8000:8000" # Exposes port 8000 for Django
+      - "8000:8000"
     volumes:
       - ./reviews:/app
     networks:
