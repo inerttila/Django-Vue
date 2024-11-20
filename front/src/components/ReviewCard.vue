@@ -41,21 +41,21 @@ const handleSearch = () => {
         class="flex flex-col lg:flex-row justify-center items-center w-full space-y-4 lg:space-y-0"
       >
         <div
-          class="flex items-center bg-gray-100 border border-gray-300 rounded-md shadow-sm w-full max-w-md lg:max-w-xs overflow-hidden"
+          class="flex items-center border border-white rounded-md shadow-sm w-full max-w-md lg:max-w-xs overflow-hidden"
           v-if="reviewsList.length"
         >
-          <MagnifyingGlassIcon class="p-3 w-10 h-10 text-gray-600" />
+          <MagnifyingGlassIcon class="p-3 w-10 h-10 text-gray" />
           <input
             type="text"
             placeholder="Search Product"
-            class="p-2 w-full bg-transparent text-black focus:outline-none"
+            class="p-2 w-full bg-transparent text-white focus:outline-none"
             v-model="searchInput"
             @keyup="handleSearch"
           />
         </div>
 
         <button
-          class="py-3 px-8 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-lg font-semibold rounded-lg shadow-lg hover:from-blue-600 hover:to-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-transform transform hover:scale-105 active:scale-95 lg:ml-4"
+          class="py-2 px-8 bg-gradient-to-r text-black text-lg rounded-lg shadow-lg border border-white focus:outline-none transition-transform transform hover:scale-105 lg:ml-4"
           @click="showNewReviewForm = !showNewReviewForm"
         >
           {{ showNewReviewForm ? 'Cancel' : 'Add Product' }}
