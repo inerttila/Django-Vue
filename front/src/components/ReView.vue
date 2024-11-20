@@ -1,5 +1,5 @@
 <script setup>
-import { HandThumbUpIcon, HandThumbDownIcon } from '@heroicons/vue/24/solid'
+import { ShoppingCartIcon, XMarkIcon } from '@heroicons/vue/24/solid'
 import { ref } from 'vue'
 import { toast } from 'vue3-toastify'
 
@@ -77,17 +77,16 @@ const onThumbDown = async (review) => {
 
       <div class="flex gap-2">
         <div class="flex cursor-pointer" @click="() => onThumbUp(review)">
-          <HandThumbUpIcon
-            class="h-6 w-6"
+          <ShoppingCartIcon
+            class="h-6 w-5"
             :class="votedThumb === 'up' ? 'text-blue-500' : 'text-gray-500'"
           />
-
           {{ review.thumbsUppCount }}
         </div>
 
         <div class="flex cursor-pointer" @click="() => onThumbDown(review)">
-          <HandThumbDownIcon
-            class="h-6 w-6"
+          <XMarkIcon
+            class="h-6 w-5"
             :class="votedThumb === 'down' ? 'text-blue-500' : 'text-gray-500'"
           />
           {{ review.thumbsDownCount }}
