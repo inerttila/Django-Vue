@@ -33,6 +33,11 @@ const refetchReviews = () => {
 </script>
 
 <template>
+  <div class="custom-template-body">
+    <div class="bg"></div>
+    <div class="mask"></div>
+    <h1 class="slogan">The Future Of Possible</h1>
+  </div>
   <ReviewCard msg="You did it" :reviewsList="reviewsList" :refetchReviews="refetchReviews" />
 </template>
 

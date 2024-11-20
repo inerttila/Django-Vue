@@ -67,7 +67,15 @@ const handleSubmit = async (e, refetch) => {
     updateOptionsInput('default')
 
     // show toast
-    toast.success('Product added successfully')
+    toast.success('Product added successfully', {
+      style: {
+        fontSize: '12px',
+        padding: '8px',
+        maxWidth: '200px',
+        borderRadius: '8px'
+      },
+      position: 'top-right'
+    })
 
     // refetch reviews
     refetch()
@@ -137,7 +145,7 @@ const handleOptionsChange = (option) => {
               name="review"
               type="text"
               autocomplete="review"
-              placeholder="Price"
+              placeholder="Price and Description"
               required
               class="block text-black w-full ps-2 rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               v-model="reviewInput"

@@ -40,10 +40,6 @@ const handleSearch = () => {
       <div
         class="flex flex-col lg:flex-row justify-between items-center w-full space-y-4 lg:space-y-0"
       >
-        <h1 class="text-3xl font-semibold text-white-800" v-if="reviewsList.length === 0">
-          Add Your First Product
-        </h1>
-        <h1 class="text-3xl font-semibold text-white-800" v-else>Products</h1>
         <div
           class="flex items-center bg-gray-100 border border-gray-300 rounded-md shadow-sm w-full max-w-md lg:max-w-xs overflow-hidden"
           v-if="reviewsList.length"
@@ -74,7 +70,7 @@ const handleSearch = () => {
         <li
           v-for="review in filteredReviews"
           :key="review.id"
-          class="w-full sm:w-72 rounded-lg shadow-lg bg-black border border-gray-200 p-4 transition-transform transform hover:scale-105"
+          class="w-full sm:w-72 rounded-lg shadow-lg bg-transparent border border-gray-200 p-4 transition-transform transform hover:scale-105"
         >
           <ReView :review="review" />
         </li>

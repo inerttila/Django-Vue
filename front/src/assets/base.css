@@ -63,25 +63,56 @@
 }
 
 body {
-  min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
-  line-height: 1.6;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  font-size: 15px;
+  color: #fff;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.custom-template-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Open Sans', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', 'Hiragino Sans GB',
+    'WenQuanYi Micro Hei', Arial, sans-serif;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+.custom-template-body .bg {
+  background: url(https://sp-webfront.skypixel.com/skypixel/v2/public/website/assets/1535027674204-f6eca6369ec03e70262b58b0e25cda7b.jpg);
+  background-size: cover;
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  filter: blur(15px);
+  z-index: -1;
+}
+
+.custom-template-body .slogan {
+  color: white;
+  margin: 24px 0;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.custom-template-body .mask {
+  width: 340px;
+  height: 196px;
+  animation: move 100s infinite;
+  background-image: url(https://sp-webfront.skypixel.com/skypixel/v2/public/website/assets/1535027674204-f6eca6369ec03e70262b58b0e25cda7b.jpg);
+  background-size: cover;
+  mask: url(http://www2.djicdn.com/assets/images/v3/logo-black2-145dcb13c56f36a65d084180a42136fa.svg);
+  mask-size: cover;
 }
