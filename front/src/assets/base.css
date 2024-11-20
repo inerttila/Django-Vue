@@ -115,4 +115,5 @@ body {
   background-size: cover;
   mask: url(http://www2.djicdn.com/assets/images/v3/logo-black2-145dcb13c56f36a65d084180a42136fa.svg);
   mask-size: cover;
+  margin-top: 10px;
 }

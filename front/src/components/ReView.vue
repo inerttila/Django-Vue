@@ -32,7 +32,15 @@ const updateLikeCount = async (review) => {
     return
   }
 
-  toast.success('Thanks for your feedback!')
+  toast.success('Thanks for your feedback!', {
+    style: {
+      fontSize: '12px',
+      padding: '8px',
+      maxWidth: '200px',
+      borderRadius: '8px'
+    },
+    position: 'top-right'
+  })
 }
 
 const onThumbUp = async (review) => {

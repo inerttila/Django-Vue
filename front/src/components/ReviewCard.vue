@@ -38,7 +38,7 @@ const handleSearch = () => {
   <div class="greetings max-w-7xl mx-auto px-4">
     <div class="flex flex-col justify-center items-center min-h-screen space-y-6">
       <div
-        class="flex flex-col lg:flex-row justify-between items-center w-full space-y-4 lg:space-y-0"
+        class="flex flex-col lg:flex-row justify-center items-center w-full space-y-4 lg:space-y-0"
       >
         <div
           class="flex items-center bg-gray-100 border border-gray-300 rounded-md shadow-sm w-full max-w-md lg:max-w-xs overflow-hidden"
@@ -78,17 +78,3 @@ const handleSearch = () => {
     </div>
   </div>
 </template>
-
-<style scoped>
-h1 {
-  font-size: 2rem;
-
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  h1 {
-    text-align: left;
-  }
-}
-</style>
