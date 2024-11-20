@@ -8,17 +8,13 @@ Private Suggestions Portal collaboratively by utilizing Django Rest Framework 3 
   - [Frontend Installation](#frontend-installation)
   - [Backend Installation](#backend-installation)
 
-## Installation
-
-Clone the repository to your local machine:
-
-```bash
-  git clone https://github.com/inerttila/Django-Vue.git
-```
+## Installation with Docker
 
 ```bash
  docker-compose up --build
 ```
+
+## Installation localy
 
 ```bash
   cd front
