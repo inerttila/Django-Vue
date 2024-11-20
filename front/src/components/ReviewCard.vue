@@ -55,7 +55,7 @@ const handleSearch = () => {
         </div>
 
         <button
-          class="py-2 px-8 bg-gradient-to-r text-black text-lg rounded-lg shadow-lg border border-white focus:outline-none transition-transform transform hover:scale-105 lg:ml-4"
+          class="py-2 px-8 bg-gradient-to-r text-white text-lg rounded-lg shadow-lg border border-white focus:outline-none transition-transform transform hover:scale-105 lg:ml-4"
           @click="showNewReviewForm = !showNewReviewForm"
         >
           {{ showNewReviewForm ? 'Cancel' : 'Add Product' }}

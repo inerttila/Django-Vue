@@ -58,7 +58,7 @@ const onThumbDown = async (review) => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-4 bg-gray-700 p-4 w-full h-full rounded-md">
+  <div class="flex flex-col gap-4 p-4 w-full h-full rounded-md">
     <div class="flex justify justify-between">
       <div class="flex gap-2">
         <div class="w-7 h-7 text-center rounded-full bg-red-500">
@@ -78,7 +78,7 @@ const onThumbDown = async (review) => {
         <div class="flex cursor-pointer" @click="() => onThumbUp(review)">
           <ShoppingCartIcon
             class="h-6 w-5"
-            :class="votedThumb === 'up' ? 'text-blue-500' : 'text-gray-500'"
+            :class="votedThumb === 'up' ? 'text-blue-500' : 'text-gray-100'"
           />
           {{ review.thumbsUppCount }}
         </div>
@@ -86,7 +86,7 @@ const onThumbDown = async (review) => {
         <div class="flex cursor-pointer" @click="() => onThumbDown(review)">
           <XMarkIcon
             class="h-6 w-5"
-            :class="votedThumb === 'down' ? 'text-blue-500' : 'text-gray-500'"
+            :class="votedThumb === 'down' ? 'text-blue-500' : 'text-gray-100'"
           />
           {{ review.thumbsDownCount }}
         </div>
