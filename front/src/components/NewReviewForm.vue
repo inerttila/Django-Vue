@@ -58,7 +58,7 @@ const handleSubmit = async (e, refetch) => {
       body: JSON.stringify(dataObj)
     })
     if (!res.ok) {
-      throw new Error('There was an error creating the review')
+      throw new Error('There was an error addeding this Product')
     }
 
     // clear inputs
@@ -67,7 +67,7 @@ const handleSubmit = async (e, refetch) => {
     updateOptionsInput('default')
 
     // show toast
-    toast.success('Review created successfully')
+    toast.success('Product added successfully')
 
     // refetch reviews
     refetch()

@@ -16,23 +16,13 @@ Clone the repository to your local machine:
   git clone https://github.com/inerttila/Django-Vue.git
 ```
 
-Navigate to the project directory:
-
 ```bash
-  cd Django-Vue
-```
-
-````bash
  docker-compose up --build
- ```
-
-## Frontend Installation
-
-To run the Vue app, navigate to the front-end directory:
+```
 
 ```bash
   cd front
-````
+```
 
 Install the required Node.js packages:
 
