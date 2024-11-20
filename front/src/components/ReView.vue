@@ -32,10 +32,9 @@ const updateLikeCount = async (review) => {
     return
   }
 
-  toast.success('Thanks for your feedback!', {
+  toast.success('Thanks for Checking!', {
     style: {
       fontSize: '12px',
-      padding: '8px',
       maxWidth: '200px',
       borderRadius: '8px'
     },

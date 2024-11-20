@@ -70,7 +70,6 @@ const handleSubmit = async (e, refetch) => {
     toast.success('Product added successfully', {
       style: {
         fontSize: '12px',
-        padding: '8px',
         maxWidth: '200px',
         borderRadius: '8px'
       },
