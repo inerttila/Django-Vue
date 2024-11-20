@@ -61,7 +61,7 @@ const onThumbDown = async (review) => {
   <div class="flex flex-col gap-4 p-4 w-full h-full rounded-md">
     <div class="flex justify justify-between">
       <div class="flex gap-2">
-        <div class="w-7 h-7 text-center rounded-full bg-red-500">
+        <div class="w-7 h-7 text-center rounded-full bg-blue-950">
           {{ review.userName.charAt(0) }}
         </div>
         <span>{{ review.userName }}</span>
