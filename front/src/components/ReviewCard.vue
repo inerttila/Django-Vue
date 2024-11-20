@@ -53,14 +53,14 @@ const handleSearch = () => {
             @keyup="handleSearch"
           />
         </div>
-      </div>
 
-      <button
-        class="mt-4 py-3 px-8 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-lg font-semibold rounded-lg shadow-lg hover:from-blue-600 hover:to-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-transform transform hover:scale-105 active:scale-95"
-        @click="showNewReviewForm = !showNewReviewForm"
-      >
-        {{ showNewReviewForm ? 'Cancel' : 'Add Product' }}
-      </button>
+        <button
+          class="py-3 px-8 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-lg font-semibold rounded-lg shadow-lg hover:from-blue-600 hover:to-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-transform transform hover:scale-105 active:scale-95 lg:ml-4"
+          @click="showNewReviewForm = !showNewReviewForm"
+        >
+          {{ showNewReviewForm ? 'Cancel' : 'Add Product' }}
+        </button>
+      </div>
 
       <div v-if="showNewReviewForm" class="w-full max-w-xl">
         <NewReviewForm :refetchReviews="refetchReviews" :showNewReviewForm="showNewReviewForm" />
