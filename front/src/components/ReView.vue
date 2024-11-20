@@ -44,7 +44,7 @@ const updateLikeCount = async (review) => {
 }
 
 const onThumbUp = async (review) => {
-  votedThumb.value = 'up' // optimistic update
+  votedThumb.value = 'up'
   review.thumbsUppCount += 1
 
   await updateLikeCount(review)
@@ -60,7 +60,6 @@ const onThumbDown = async (review) => {
 
 <template>
   <div class="flex flex-col gap-4 bg-gray-700 p-4 w-full h-full rounded-md">
-    <!-- Profile and Rating -->
     <div class="flex justify justify-between">
       <div class="flex gap-2">
         <div class="w-7 h-7 text-center rounded-full bg-red-500">
@@ -71,14 +70,11 @@ const onThumbDown = async (review) => {
       <div class="flex p-1 gap-1 text-orange-300"></div>
     </div>
 
-    <!-- <div>Gorgeous design! Even more responsive than the previous version. A pleasure to use!</div> -->
     <div>{{ review.review }}</div>
 
     <div class="flex justify-between">
       <span>{{ new Date(review.created_at).toLocaleDateString() }}</span>
-      <!-- <button class="p-1 px-2 bg-gray-900 hover:bg-gray-950 border border-gray-950 bg-opacity-60">
-        <ion-icon name="share-outline"></ion-icon> Share
-      </button> -->
+
       <div class="flex gap-2">
         <div class="flex cursor-pointer" @click="() => onThumbUp(review)">
           <HandThumbUpIcon
@@ -88,6 +84,7 @@ const onThumbDown = async (review) => {
 
           {{ review.thumbsUppCount }}
         </div>
+
         <div class="flex cursor-pointer" @click="() => onThumbDown(review)">
           <HandThumbDownIcon
             class="h-6 w-6"
