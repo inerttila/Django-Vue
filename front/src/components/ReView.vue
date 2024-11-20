@@ -68,12 +68,7 @@ const onThumbDown = async (review) => {
         </div>
         <span>{{ review.userName }}</span>
       </div>
-      <div class="flex p-1 gap-1 text-orange-300">
-        <!-- <StarIcon class="h-6 w-6 text-blue-500" />
-        <StarIcon class="h-6 w-6 text-blue-500" />
-        <StarIcon class="h-6 w-6 text-blue-500" />
-        <StarIcon class="h-6 w-6 text-blue-500" /> -->
-      </div>
+      <div class="flex p-1 gap-1 text-orange-300"></div>
     </div>
 
     <!-- <div>Gorgeous design! Even more responsive than the previous version. A pleasure to use!</div> -->
@@ -104,5 +99,3 @@ const onThumbDown = async (review) => {
     </div>
   </div>
 </template>
-
-<style scoped></style>
