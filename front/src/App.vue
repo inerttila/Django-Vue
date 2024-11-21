@@ -35,7 +35,10 @@ const refetchReviews = () => {
 <template>
   <div class="custom-template-body">
     <div class="bg"></div>
-    <div class="mask"></div>
+    <div
+      class="mask"
+      onclick="window.open('http://192.168.40.14:8000/admin/login/?next=/admin/', '_blank');"
+    ></div>
     <h1 class="slogan">The Future Of Possible</h1>
   </div>
   <ReviewCard msg="You did it" :reviewsList="reviewsList" :refetchReviews="refetchReviews" />
