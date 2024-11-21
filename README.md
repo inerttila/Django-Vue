@@ -13,7 +13,10 @@ Build and start
 To create superuser run in another wsl
 
 ```bash
-docker exec -it inventar-djnago python /app/manage.py createsuperuser
+docker exec -it inventar-djnago /bin/bash
+
+python manage.py createsuperuser
+
 ```
 
 ## Frontend Installation
