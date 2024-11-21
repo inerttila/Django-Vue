@@ -12,9 +12,14 @@ services:
       - "8000:8000"
     volumes:
       - ./reviews:/app
+      - /mnt/c/Users/User/Desktop/Django-Vue:/data
+    environment:
+      - DATABASE_PATH=/data/db.sqlite3
     networks:
       - frontend
       - backend
+    command: >
+      bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
 
   # Vue.js app service
   inventar-vue:
@@ -27,7 +32,6 @@ services:
       - "3000:3000"
     volumes:
       - ./front:/app
-
     networks:
       - frontend
       - backend
