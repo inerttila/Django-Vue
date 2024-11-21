@@ -1,6 +1,6 @@
 <script setup>
 import { ShoppingCartIcon, XMarkIcon } from '@heroicons/vue/24/solid'
-import { ref } from 'vue'
+import { ref, h } from 'vue'
 import { toast } from 'vue3-toastify'
 
 defineProps({
@@ -43,17 +43,95 @@ const updateLikeCount = async (review) => {
 }
 
 const onThumbUp = async (review) => {
-  votedThumb.value = 'up'
-  review.thumbsUppCount += 1
-
-  await updateLikeCount(review)
+  const toastId = toast.info(
+    h('div', [
+      h('p', 'Are you sure you got this product?'),
+      h('div', { class: 'flex gap-2 mt-2' }, [
+        h(
+          'button',
+          {
+            class: 'px-4 py-2 bg-blue-500 text-white rounded-md',
+            onClick: () => handleThumbUp(review, toastId)
+          },
+          'Yes'
+        ),
+        h(
+          'button',
+          {
+            class: 'px-4 py-2 bg-gray-300 text-black rounded-md',
+            onClick: () => handleCancel(toastId)
+          },
+          'No'
+        )
+      ])
+    ]),
+    {
+      autoClose: false,
+      position: 'top-right',
+      closeButton: false,
+      hideProgressBar: true,
+      style: {
+        fontSize: '12px',
+        maxWidth: '200px',
+        borderRadius: '8px'
+      }
+    }
+  )
 }
 
 const onThumbDown = async (review) => {
+  const toastId = toast.info(
+    h('div', [
+      h('p', 'Are you sure you sold this product?'),
+      h('div', { class: 'flex gap-2 mt-2' }, [
+        h(
+          'button',
+          {
+            class: 'px-4 py-2 bg-blue-500 text-white rounded-md',
+            onClick: () => handleThumbDown(review, toastId)
+          },
+          'Yes'
+        ),
+        h(
+          'button',
+          {
+            class: 'px-4 py-2 bg-gray-300 text-black rounded-md',
+            onClick: () => handleCancel(toastId)
+          },
+          'No'
+        )
+      ])
+    ]),
+    {
+      autoClose: false,
+      position: 'top-right',
+      closeButton: false,
+      hideProgressBar: true,
+      style: {
+        fontSize: '12px',
+        maxWidth: '200px',
+        borderRadius: '8px'
+      }
+    }
+  )
+}
+
+const handleThumbUp = async (review, toastId) => {
+  votedThumb.value = 'up'
+  review.thumbsUppCount += 1
+  await updateLikeCount(review)
+  toast.remove(toastId) // Remove the specific toast using its ID
+}
+
+const handleThumbDown = async (review, toastId) => {
   votedThumb.value = 'down'
   review.thumbsDownCount += 1
-
   await updateLikeCount(review)
+  toast.remove(toastId) // Remove the specific toast using its ID
+}
+
+const handleCancel = (toastId) => {
+  toast.remove(toastId) // Remove the specific toast if the user clicks 'No'
 }
 </script>
 
