@@ -112,7 +112,7 @@ const handleOptionsChange = (option) => {
         </div>
 
         <div>
-          <label for="options" class="block text-sm font-medium leading-6">Category</label>
+          <label for="options" class="block text-sm font-medium leading-6">Shop</label>
           <div class="mt-2">
             <select
               id="options"
@@ -122,7 +122,7 @@ const handleOptionsChange = (option) => {
               class="block text-black w-full ps-2 rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               @change="handleOptionsChange($event.target.value)"
             >
-              <option value="default" disabled selected>Select an Category</option>
+              <option value="default" disabled selected>Select the Shop</option>
               <option value="skaitech">SKAITECH</option>
               <option value="3dskai">3DSKAI</option>
               <option value="other">Other</option>
