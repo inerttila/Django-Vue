@@ -2,12 +2,12 @@ version: "3.8"
 
 services:
   # Django app service
-  inventar-djnago:
+  inventar-django:
     build:
       context: ./reviews
       dockerfile: Dockerfile
-    image: inert/inventar-djnago:new
-    container_name: inventar-djnago
+    image: inert/inventar-django:new
+    container_name: inventar-django
     ports:
       - "8000:8000"
     volumes:
