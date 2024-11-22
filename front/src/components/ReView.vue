@@ -120,18 +120,18 @@ const handleThumbUp = async (review, toastId) => {
   votedThumb.value = 'up'
   review.thumbsUppCount += 1
   await updateLikeCount(review)
-  toast.remove(toastId) // Remove the specific toast using its ID
+  toast.remove(toastId) 
 }
 
 const handleThumbDown = async (review, toastId) => {
   votedThumb.value = 'down'
   review.thumbsDownCount += 1
   await updateLikeCount(review)
-  toast.remove(toastId) // Remove the specific toast using its ID
+  toast.remove(toastId) 
 }
 
 const handleCancel = (toastId) => {
-  toast.remove(toastId) // Remove the specific toast if the user clicks 'No'
+  toast.remove(toastId)
 }
 </script>
 

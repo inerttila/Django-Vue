@@ -123,11 +123,8 @@ const handleOptionsChange = (option) => {
               @change="handleOptionsChange($event.target.value)"
             >
               <option value="default" disabled selected>Select an Category</option>
-              <option value="web-development">DJI Drone</option>
-              <option value="mobile-development">Dji Camera</option>
-              <option value="data-science">Dji Mic</option>
-              <option value="devops">Bambu Lab</option>
-              <option value="other">Filaments</option>
+              <option value="skaitech">SKAITECH</option>
+              <option value="3dskai">3DSKAI</option>
               <option value="other">Other</option>
             </select>
             {{ noOptionsSelectedMsg }}
