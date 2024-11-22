@@ -25,13 +25,8 @@ defineProps({
     type: Function,
     required: true
   }
-  // showNewReviewForm: {
-  //   type: Boolean,
-  //   required: true
-  // }
 })
 
-// handle form submission
 const handleSubmit = async (e, refetch) => {
   e.preventDefault()
 
@@ -58,7 +53,7 @@ const handleSubmit = async (e, refetch) => {
       body: JSON.stringify(dataObj)
     })
     if (!res.ok) {
-      throw new Error('There was an error addeding this Product')
+      throw new Error('There was an error adding this product')
     }
 
     // clear inputs
@@ -161,5 +156,3 @@ const handleOptionsChange = (option) => {
     </div>
   </div>
 </template>
-
-<style scoped></style>
