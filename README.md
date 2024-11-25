@@ -4,7 +4,8 @@
 
 ## Installation with Docker
 
-Build and start on wsl only
+Build and start on wsl only.
+
 "Before running this, make sure the following path exists: /mnt/c/Local-Shop/. This is done to keep the db.sqlite3 safe."
 
 ```bash
