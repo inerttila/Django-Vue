@@ -4,7 +4,7 @@
 
 ## Installation with Docker
 
-Build and start
+Build and start on wsl only
 
 ```bash
  docker-compose up --build
