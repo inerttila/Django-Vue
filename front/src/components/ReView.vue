@@ -14,7 +14,7 @@ const votedThumb = ref('')
 
 const updateLikeCount = async (review) => {
   const res = await fetch(
-    `http://192.168.40.14:8000/api/reviews/${review.id}/update_thumbs_count/`,
+    `http://192.168.40.51:8000/api/reviews/${review.id}/update_thumbs_count/`,
     {
       method: 'PATCH',
       headers: {
@@ -120,14 +120,14 @@ const handleThumbUp = async (review, toastId) => {
   votedThumb.value = 'up'
   review.thumbsUppCount += 1
   await updateLikeCount(review)
-  toast.remove(toastId) 
+  toast.remove(toastId)
 }
 
 const handleThumbDown = async (review, toastId) => {
   votedThumb.value = 'down'
   review.thumbsDownCount += 1
   await updateLikeCount(review)
-  toast.remove(toastId) 
+  toast.remove(toastId)
 }
 
 const handleCancel = (toastId) => {

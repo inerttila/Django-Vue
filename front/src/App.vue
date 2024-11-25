@@ -11,7 +11,7 @@ const { reviewsList, filteredReviews } = storeToRefs(generalsStore)
 
 const fetchAndSetReviews = async () => {
   try {
-    const res = await fetch('http://192.168.40.14:8000/api/reviews/')
+    const res = await fetch('http://192.168.40.51:8000/api/reviews/')
 
     const reviews = await res.json()
 
@@ -37,7 +37,7 @@ const refetchReviews = () => {
     <div class="bg"></div>
     <div
       class="mask"
-      onclick="window.open('http://192.168.40.14:8000/admin/login/?next=/admin/', '_blank');"
+      onclick="window.open('http://192.168.40.51:8000/admin/login/?next=/admin/', '_blank');"
     ></div>
     <h1 class="slogan">The Future Of Possible</h1>
   </div>
