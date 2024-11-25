@@ -12,14 +12,13 @@ services:
       - "8000:8000"
     volumes:
       - ./reviews:/app
-      - /mnt/c/Users/User/Desktop/Django-Vue:/data
+      - /mnt/c/Local-Shop:/data
     environment:
       - DATABASE_PATH=/data/db.sqlite3
     networks:
       - frontend
       - backend
-    command: >
-      bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    command: bash /app/start.sh
     restart: always
 
   # Vue.js app service
