@@ -1,5 +1,4 @@
 from rest_framework.serializers import ModelSerializer
-
 from .models import Employee, Review
 
 class EmployeeSerializer(ModelSerializer):
@@ -10,4 +9,4 @@ class EmployeeSerializer(ModelSerializer):
 class ReviewSerializer(ModelSerializer):
     class Meta:
         model = Review
-        fields = ["id", "userName", "thumbsUppCount", "thumbsDownCount", "review", "created_at"]
+        fields = ["id", "userName", "thumbsUppCount", "thumbsDownCount", "review", "shop", "created_at"]
