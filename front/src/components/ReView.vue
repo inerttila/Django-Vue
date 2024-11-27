@@ -14,7 +14,7 @@ const votedThumb = ref('')
 
 const updateLikeCount = async (review) => {
   const res = await fetch(
-    `http://192.168.40.51:8000/api/reviews/${review.id}/update_thumbs_count/`,
+    `http://192.168.40.14:8000/api/reviews/${review.id}/update_thumbs_count/`,
     {
       method: 'PATCH',
       headers: {
