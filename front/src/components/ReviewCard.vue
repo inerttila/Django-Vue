@@ -26,7 +26,8 @@ const handleSearch = () => {
   const filtered = reviewsList.value.filter((review) => {
     return (
       review.review.toLowerCase().includes(searchInput.value.toLowerCase()) ||
-      review.userName.toLowerCase().includes(searchInput.value.toLowerCase())
+      review.userName.toLowerCase().includes(searchInput.value.toLowerCase()) ||
+      review.shop.toLowerCase().includes(searchInput.value.toLowerCase())
     )
   })
 
@@ -47,8 +48,9 @@ const handleSearch = () => {
           <MagnifyingGlassIcon class="p-3 w-10 h-10 text-gray" />
           <input
             type="text"
-            placeholder="Search Product"
+            placeholder="Search by Name , Price , Description or Shop "
             class="p-2 w-full bg-transparent text-white focus:outline-none"
+            style="font-size: 12px"
             v-model="searchInput"
             @keyup="handleSearch"
           />
