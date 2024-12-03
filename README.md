@@ -10,7 +10,7 @@ Build and start on wsl only.
 
 ```bash
  docker-compose up
-```cle
+```
 
 And to build the docker images run
 
