@@ -28,21 +28,20 @@ RUN apt-get update && apt-get install -y \
     supervisor \
     && rm -rf /var/lib/apt/lists/*
 
+COPY --from=frontend /usr/src/app/front/dist /usr/src/app/front/dist
+
 RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs
 
+COPY reviews/ ./reviews
+
 WORKDIR /usr/src/app/reviews
-COPY reviews/ ./
 
 RUN pip install djangorestframework django-cors-headers
 
-# Copy the frontend build into the backend container
-COPY --from=frontend /usr/src/app/front/dist /usr/src/app/reviews/static
 
 COPY ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-RUN python manage.py migrate
-
 EXPOSE 8000 3000
 
-CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+CMD ["sh", "-c", "python manage.py migrate && supervisord -c /etc/supervisor/conf.d/supervisord.conf"]

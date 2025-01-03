@@ -2,8 +2,8 @@ services:
   inventar-app:
     build:
       context: .
-      dockerfile: Dockerfile  
-    image: inert/store:end 
+      dockerfile: Dockerfile
+    image: inert/store:end
     container_name: inventar-app
     ports:
       - "8000:8000"  # Django backend
@@ -11,9 +11,8 @@ services:
     volumes:
       - ./reviews:/usr/src/app/reviews  
       - ./front:/usr/src/app/front      
-      - /mnt/c/Local-Shop:/data        
     environment:
-      - DATABASE_PATH=/data/db.sqlite3  
+      DATABASE_PATH: /data/db.sqlite3  
     networks:
       - frontend
       - backend
