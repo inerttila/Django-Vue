@@ -1,7 +1,6 @@
 # Stage 1: Build the Vue.js frontend
 FROM node:20 AS frontend
 
-WORKDIR /usr/src/app
 WORKDIR /usr/src/app/front
 COPY front/package*.json ./
 RUN npm install
