@@ -10,8 +10,9 @@ services:
       - "8000:8000"
     volumes:
       - ./reviews:/app
-      - /mnt/c/Local-Shop:/data
     environment:
+      # change this if know what you are doing
+      # change the database path  if you want to use a different one so that the data is not lost when the container is removed
       - DATABASE_PATH=/data/db.sqlite3
     networks:
       - frontend
