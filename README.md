@@ -4,9 +4,9 @@
 
 ## Installation with Docker
 
-Build and start on wsl only.
+Build and start:
 
-"Before running this, make sure the following path exists: /mnt/c/Local-Shop/. This is done to keep the db.sqlite3 safe."
+There is no need to clone the code , you can just get the docker-compose.yml into your machine and run the :
 
 ```bash
  docker-compose up
