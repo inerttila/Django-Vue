@@ -1,18 +1,36 @@
 services:
-  inventar-app:
+  # Django app service
+  inventar-django:
     build:
-      context: .
+      context: ./reviews
       dockerfile: Dockerfile
-    image: inert/store:end
-    container_name: inventar-app
+    image: inert/inventar-django:new
+    container_name: inventar-django
     ports:
-      - "8000:8000"  # Django backend
-      - "3000:3000"  # Vue.js frontend
+      - "8000:8000"
     volumes:
-      - ./reviews:/usr/src/app/reviews  
-      - ./front:/usr/src/app/front      
+      - ./reviews:/app
+      - /mnt/c/Local-Shop:/data
     environment:
-      DATABASE_PATH: /data/db.sqlite3  
+      - DATABASE_PATH=/data/db.sqlite3
+    networks:
+      - frontend
+      - backend
+    command: >
+      bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    restart: always
+
+  # Vue.js app service
+  inventar-vue:
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    image: inert/inventar-vue:new
+    container_name: inventar-vue
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./front:/app
     networks:
       - frontend
       - backend
