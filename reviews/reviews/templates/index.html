@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend</title>
+    <link
+      rel="icon"
+      href="https://skaitech.al/wp-content/uploads/2024/03/icons8-source-code-100.png"
+      type="image/png" />
+    <meta
+      name="description"
+      content=" I am a Software Developer , with expertise in technologies such as Python and frameworks like Django, FastAPI and Flask. I also have skills in frontend development using JavaScript and Node.js. My passion lies in creating high performance applications by utilizing Docker and Linux for deployment. I have hands on experience in designing e commerce solutions using Medusa with an emphasis on enhancing SEO for improved visibility and performance. I am currently exploring opportunities, within the tech industry." />
+    <meta name="description" content="Software Development Services." />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Mukta:700");
+
+    :root {
+      --bg: #f3f8fa;
+      --white: #fff;
+      --black: #282936;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Mukta", sans-serif;
+      font-size: 1rem;
+      line-height: 1.5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+    }
+
+    button {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      vertical-align: middle;
+      text-decoration: none;
+      background: transparent;
+      padding: 0;
+      font-size: inherit;
+      font-family: inherit;
+    }
+
+    button.learn-more {
+      width: 12rem;
+      height: auto;
+    }
+
+    button.learn-more .circle {
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      position: relative;
+      display: block;
+      margin: 0;
+      width: 3rem;
+      height: 3rem;
+      background: var(--black);
+      border-radius: 1.625rem;
+    }
+
+    button.learn-more .circle .icon {
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: var(--white);
+    }
+
+    button.learn-more .circle .icon.arrow {
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      left: 0.625rem;
+      width: 1.125rem;
+      height: 0.125rem;
+      background: none;
+    }
+
+    button.learn-more .circle .icon.arrow::before {
+      position: absolute;
+      content: "";
+      top: -0.25rem;
+      right: 0.0625rem;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-top: 0.125rem solid #fff;
+      border-right: 0.125rem solid #fff;
+      transform: rotate(45deg);
+    }
+
+    button.learn-more .button-text {
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0.75rem 0;
+      margin: 0 0 0 1.85rem;
+      color: var(--black);
+      font-weight: 700;
+      line-height: 1.6;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    button:hover .circle {
+      width: 100%;
+    }
+
+    button:hover .circle .icon.arrow {
+      background: var(--white);
+      transform: translate(1rem, 0);
+    }
+
+    button:hover .button-text {
+      color: var(--white);
+    }
+
+    @supports (display: grid) {
+      body {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0.625rem;
+        grid-template-areas:
+          ". main main ."
+          ". main main .";
+      }
+
+      #container {
+        grid-area: main;
+        align-self: center;
+        justify-self: center;
+      }
+    }
+  </style>
+  <body>
+    <div id="container">
+      <a href="/admin">
+        <button class="learn-more">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">Login</span>
+        </button>
+      </a>
+      <br />
+      <br />
+      <a href="/api">
+        <button class="learn-more">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">Api</span>
+        </button>
+      </a>
+    </div>
+  </body>
+</html>
