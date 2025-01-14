@@ -17,8 +17,8 @@ class Employee(models.Model):
 
 class Review(models.Model):
     SHOP_CHOICES = [
-        ('skaitech', 'SKAITECH'),
-        ('3dskai', '3DSKAI'),
+        ('Shop 1', 'Shop 1'),
+        ('Shop 2', 'Shop 2'),
     ]
 
     userName = models.CharField(max_length=100, null=True)

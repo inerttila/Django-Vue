@@ -113,8 +113,8 @@ const handleSubmit = async (e, refetch) => {
               v-model="optionsInput"
             >
               <option value="default" disabled>Select the Shop</option>
-              <option value="skaitech">SKAITECH</option>
-              <option value="3dskai">3DSKAI</option>
+              <option value="Shop 1">Shop 1</option>
+              <option value="Shop 2">Shop 2</option>
             </select>
             {{ noOptionsSelectedMsg }}
           </div>

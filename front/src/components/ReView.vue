@@ -142,9 +142,9 @@ const handleCancel = (toastId) => {
         <div
           class="w-7 h-7 text-center rounded-full"
           :class="{
-            'bg-red-500': review.shop === '3dskai',
-            'bg-blue-500': review.shop === 'skaitech',
-            'bg-gray-300': review.shop !== '3dskai' && review.shop !== 'skaitech'
+            'bg-red-500': review.shop === 'Shop 1',
+            'bg-blue-500': review.shop === 'Shop 2',
+            'bg-gray-300': review.shop !== 'Shop 1' && review.shop !== 'Shop 2'
           }"
         >
           {{ review.userName.charAt(0) }}
