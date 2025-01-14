@@ -30,7 +30,7 @@ python manage.py createsuperuser
 ## Frontend Installation
 
 ```bash
-  cd Django-Vue/front
+  cd Inventory-Management/front
 ```
 
 Install the required Node.js packages:
@@ -50,7 +50,7 @@ Start the frontend app:
 Open a new terminal and go to the backend directory:
 
 ```bash
-  cd Django-Vue/reviews
+  cd Inventory-Management/reviews
 ```
 
 ```bash
