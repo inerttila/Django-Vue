@@ -5,7 +5,7 @@
 Open a new terminal and navigate to the backend directory:
 
 ```bash
-  cd Django-Vue/reviews
+  cd Inventory-Management/reviews
 ```
 
 ```bash
