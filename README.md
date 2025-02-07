@@ -21,7 +21,7 @@ And to build the docker images run
 To create superuser run in another wsl
 
 ```bash
-docker exec -it inventar-django /bin/bash
+docker exec -it Inventory-Management /bin/bash
 
 python manage.py createsuperuser
 
