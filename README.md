@@ -20,9 +20,9 @@ And to build the docker images run
 
 Check :
 
-  localhost:8000 #backend
+  http://localhost:8000/ #backend
   
-  localost:3000 #frontend
+  http://localhost:3000/ #frontend
 
 To create superuser run in another wsl
 
