@@ -12,17 +12,17 @@ There is no need to clone the code , you can just get the docker-compose.yml int
  docker-compose up
 ```
 
-And to build the docker images run
-
-```bash
- docker-compose build
-```
-
 Check :
 
   http://localhost:8000/ #backend
   
   http://localhost:3000/ #frontend
+
+And to build the docker images run
+
+```bash
+ docker-compose build
+```
 
 To create superuser run in another wsl
 
