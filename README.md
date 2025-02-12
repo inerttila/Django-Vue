@@ -18,6 +18,10 @@ And to build the docker images run
  docker-compose build
 ```
 
+Check :
+  localhost:8000 #backend
+  localost:3000 #frontend
+
 To create superuser run in another wsl
 
 ```bash
